@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.settings {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f5f7fb;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.settings-header {
+  margin-bottom: 30px;
+}
+
+.settings-header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.settings-header p {
+  color: #777;
+  font-size: 15px;
+}
+
+/* =========================
+   SETTINGS CONTAINER
+========================= */
+
+.settings-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+}
+
+/* =========================
+   SETTINGS CARD
+========================= */
+
+.settings-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.settings-card h2 {
+  font-size: 20px;
+  margin-bottom: 22px;
+  color: #222;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ff7200;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  color: #222;
+}
+
+.form-group input:focus {
+  border-color: #ff7200;
+  box-shadow: 0 0 0 2px rgba(23, 105, 255, 0.1);
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn {
+  background: #ff7200;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.save-btn:hover {
+  background: #ff7200;
+}
+
+/* =========================
+   SETTING ROW
+========================= */
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-row h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.setting-row p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================
+   TOGGLE SWITCH
+========================= */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background-color: #ff7200;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.settings.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.settings.dark .settings-header h1,
+.settings.dark .settings-card h2,
+.settings.dark .setting-row h3 {
+  color: white;
+}
+
+.settings.dark .settings-header p,
+.settings.dark .setting-row p {
+  color: #bbb;
+}
+
+.settings.dark .settings-card {
+  background: #2b2b2b;
+}
+
+.settings.dark .form-group label {
+  color: #ddd;
+}
+
+.settings.dark .form-group input {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.settings.dark .setting-row {
+  border-color: #444;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .settings {
+    padding: 25px;
+  }
+
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .settings {
+    padding: 18px;
+  }
+
+  .settings-header h1 {
+    font-size: 25px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+}

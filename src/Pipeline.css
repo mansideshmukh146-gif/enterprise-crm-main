@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+/* =========================
+   PIPELINE PAGE
+========================= */
+
+.pipeline-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pipeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pipeline-header h1 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.pipeline-header p {
+  color: #777;
+  font-size: 15px;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+/* =========================
+   ADD DEAL BUTTON
+========================= */
+
+.add-deal-btn {
+  background: #ff7200;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-deal-btn:hover {
+  background: #ff7200;
+}
+
+/* =========================
+   ADD DEAL FORM
+========================= */
+
+.deal-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.deal-form h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d5d9e2;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background:white;
+  color:#808080;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff7200;
+  
+  
+}
+  .form-group select[name="stage"] {
+  background-color: #eaf2ff;
+  font-weight: 600;
+  color:#333;
+}
+
+
+/* =========================
+   SAVE DEAL BUTTON
+========================= */
+
+.save-deal-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff7200;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-deal-btn:hover {
+  background: #ff7200;
+}
+
+/* =========================
+   PIPELINE COLUMNS
+========================= */
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.stage {
+  background: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 350px;
+}
+
+.stage h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   DEAL CARD
+========================= */
+
+.deal-card {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.deal-card h4 {
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 17px;
+}
+
+.deal-card p {
+  color: #777;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.deal-card strong {
+  color: #1769ff;
+  font-size: 16px;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-deal-btn {
+  margin-top: 15px;
+  padding: 8px 14px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-deal-btn:hover {
+  background: #c62828;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.stage p {
+  font-size: 14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .pipeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .pipeline-page {
+    padding: 20px;
+  }
+
+  .pipeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .stage {
+    min-height: auto;
+  }
+
+  .deal-form {
+    max-width: 100%;
+  }
+}
